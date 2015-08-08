@@ -1,0 +1,17 @@
+ echo "\n", json_encode($whateverYouWantToVarDump, JSON_PRETTY_PRINT), "\nn
+
+db.collectionn.find( { field: { $gt: value1, $lt: value2 } } );
+db['Invoice-D1157A2016614FCA978699A7BFC02BAD'].find({field: thing}).pretty();
+
+alias u="phpunit   -c ./app "
+alias uf="phpunit  -c ./app --filter="
+alias us="phpunit  -c ./app --stop-on-failure "
+alias usf="phpunit -c ./app --stop-on-failure --filter="
+alias ufs="phpunit -c ./app --stop-on-failure --filter="
+alias usql="phpunit -c ./app $API_DIR/src/Bean/APIBundle/Tests/SqliteSchemaGeneration.php"
+
+https://plus.google.com/108229693850773474783/about?gl=ca&hl=en
+
+http://v1.corenominal.org/howto-setup-a-crontab-file/
+
+https://docs.google.com/spreadsheets/d/1zf8PmpWw4p9-EBXfWtik8dqthQaF0FXjgimFBtHR4_g/edit#gid=1
