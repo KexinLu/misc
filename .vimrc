@@ -24,16 +24,7 @@ map <C-n> :NERDTreeToggle<CR>
 " for colorschema
 Plugin 'flazz/vim-colorschemes'
 Plugin 'modess/vim-phpcolors'
-
-
-
-
-
-
-
-
-
-
+Plugin 'Shutnik/jshint2.vim'
 
 " ------------------------------------plug in finish--------------------------------
 set modeline    " read mode line
@@ -68,18 +59,26 @@ map Q :nohlsearch<CR>
 
 syntax on
 
-map ,d :!git d % <CR> <CR>
+map ,d :!git diff % <CR>
 
 imap jj <Esc>
-map <S-Enter> O<Esc>
+
+noremap <S-Enter> O<Esc>
+
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+
 " keymappings end here -----------------------------
 
 set background=dark
 colorscheme gruvbox
 if has("mouse")
-set mouse=
+set mouse=v
 endif
 
+set clipboard^=unnamed
 " If comparing files side-by-side, then ...
 if &diff
     " double the width up to a reasonable maximum
@@ -124,4 +123,15 @@ autocmd BufWritePre * :%s/\s\+$//e
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
 
+" adding functions below
 
+function! Search(...)
+    let args=split(a:1)
+    if len(args) == 2
+        let dir=args[1]
+    else
+        let dir='.'
+    endif
+    echom args[0] . "  " . shellescape(dir)
+endfunction
+com! -nargs=? GrepTab call s:NewTabGrep('<args>')
