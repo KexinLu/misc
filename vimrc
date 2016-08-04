@@ -46,6 +46,8 @@ set visualbell
 set showfulltag
 set hlsearch
 set undolevels=1000 "explicitly state default, just in case...
+set splitbelow
+set splitright
 
 set backspace=indent,eol,start
 set updatetime=2000
@@ -69,6 +71,13 @@ nnoremap <C-l> w
 nnoremap <C-j> 5j
 nnoremap <C-k> 5k
 vnoremap <C-@> <CR>
+
+vnoremap <C-h> b
+vnoremap <C-l> w
+vnoremap <C-j> 5j
+vnoremap <C-k> 5k
+vnoremap <Tab> :<c-u>call Tab()<CR>gv
+
 cnoremap <C-c> :call CopyLines() <CR>
 nnoremap <C-c> :call CopyLines() <CR>
 inoremap <C-c> <esc> :call CopyLines() <CR>
