@@ -47,9 +47,9 @@
 #  c:41 + m:0x4
 # "xset r off; xdotool keyup control keyup space key --clearmodifiers KP_Enter; xset r on"
 # "sleep 0.1;returnkey"
-"xset r off; xdotool keyup --window 0 space key --clearmodifiers --window 0 KP_Enter; xset r on"
-   m:0x14 + c:65
-   Control+Mod2 + space
+   # m:0x1c + c:42
+   # Control+Alt+Mod2 + b
+
 #
 #
 
@@ -78,3 +78,44 @@
 ##################################
 # End of xbindkeys configuration #
 ##################################
+
+"xset r off; xdotool keyup --window 0 space key --clearmodifiers --window 0 KP_Enter; xset r on"
+   m:0x14 + c:65
+   Control+Mod2 + space
+
+"guake"
+   m:0x1c + c:42
+   Control+Alt+Mod2 + g
+
+"google-chrome"
+   m:0x1c + c:56
+   Control+Alt+Mod2 + b
+
+"xset r off; xdotool keyup --window 0 grave key --clearmodifiers --window 0 backslash; xset r on"
+   m:0x1c + c:49
+   Control+Alt+Mod2 + grave
+
+"xset r off; xdotool keyup --window 0 grave key --clearmodifiers --window 0 slash; xset r on"
+   m:0x14 + c:49
+   Control+Mod2 + grave
+
+"xset r off; xdotool keyup --window 0 3 key --clearmodifiers --window 0 minus greater; xset r on"
+    m:0x14 + c:12
+    Control+Mod2 + 3
+
+"xset r off; xdotool keyup --window 0 3 key --clearmodifiers --window 0 equal greater; xset r on"
+    m:0x1c + c:12
+    Control+Alt+Mod2 + 3
+
+#
+# "xset r off; xdotool keyup --window 0 3 key --clearmodifiers --window 0 equal; xset r on"
+#    m:0x14 + c:10
+#    Control+Mod2 + 3
+
+"xset r off; xdotool keyup --window 0 1 key --clearmodifiers --window 0 period; xset r on"
+   m:0x14 + c:10
+   Control+Mod2 + 1
+
+"xset r off; xdotool keyup --window 0 2 key --clearmodifiers --window 0 equal; xset r on"
+   m:0x14 + c:11
+   Control+Mod2 + 2

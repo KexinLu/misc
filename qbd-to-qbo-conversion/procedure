@@ -1,0 +1,32 @@
+* Phase1 Prepare
+
+1. Godo DB1 find which pod the user is on
+```
+$ sm CUSTOMER_NAME
+```
+2. backup customer Data without mongo and name it CUSTOMER_NAMEbackupqbd.tar.gz
+
+```
+$ ssh apiX
+$ backuprestore
+```
+3. unset the old erp for the legalentity
+in postgrey set erp = null;
+
+4. goto bcm choose integrate with ERP
+
+5. set up the legalentity with quickbooksonline
+
+6. let the customer connect to qbo and sync in their setting.
+
+7. after the sync, backup one more time and name this CUSTOMER_NAMEbackupwithqbo.tar.gz
+
+8. restore CUSTOMER_NAMEbackupwithqbo.tar.gz locally and do the following operations
+
+* Phase2 Construct sql script
+
+9. deactivate any lists that's not being used
+like billable, department, etc.
+
+10
+
